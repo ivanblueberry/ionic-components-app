@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router'
 
 // Icons of Ionic
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, americanFootballOutline, beakerOutline,
+import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline,
       } from 'ionicons/icons';
 
 
@@ -56,13 +56,19 @@ export class InicioPage implements OnInit {
       icon: 'beaker-outline',
       name: 'Avatar',
       redirectTo: '/avatar'
+    },
+    {
+      icon: 'radio-button-off-outline',
+      name: 'Buttons',
+      redirectTo: '/button'
     }
   ]
 
   constructor() {
     addIcons({americanFootballOutline,
               alertCircleOutline,
-              beakerOutline
+              beakerOutline,
+              radioButtonOffOutline
     });
    }
 
