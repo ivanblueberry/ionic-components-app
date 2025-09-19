@@ -14,8 +14,8 @@ import { RouterModule } from '@angular/router'
 
 // Icons of Ionic
 import { addIcons } from 'ionicons';
-import { americanFootballOutline,
-         logoAppleAppstore} from 'ionicons/icons';
+import { alertCircleOutline, americanFootballOutline, beakerOutline,
+      } from 'ionicons/icons';
 
 
 interface Componente {
@@ -48,15 +48,21 @@ export class InicioPage implements OnInit {
       redirectTo: '/action-sheet'
     },
     {
-      icon: 'logo-apple-appstore',
+      icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon: 'beaker-outline',
+      name: 'Avatar',
+      redirectTo: '/avatar'
     }
   ]
 
   constructor() {
     addIcons({americanFootballOutline,
-              logoAppleAppstore
+              alertCircleOutline,
+              beakerOutline
     });
    }
 
