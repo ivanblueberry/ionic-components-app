@@ -1,0 +1,19 @@
+<app-header>Checks</app-header>
+
+<ion-content [fullscreen]="true">
+  <app-large-title title="Checks"></app-large-title>
+
+  <ion-list>
+    @for (item of data; track item.name) {
+      <ion-item>
+        <ion-checkbox
+          slot="start"
+          [checked]="item.selected"
+          [color]="item.name">
+        </ion-checkbox>
+        <ion-label>{{ item.name }}</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+
+</ion-content>
