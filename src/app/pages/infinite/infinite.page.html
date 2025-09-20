@@ -1,0 +1,20 @@
+<app-header title="infinite scroll"></app-header>
+
+<ion-content [fullscreen]="true">
+  <app-large-title title="infinite scroll"></app-large-title>
+
+  @for (item of data; track $index) {
+    <ion-item>
+      <ion-label>item {{ $index + 1 }}</ion-label>
+    </ion-item>
+  }
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content
+      loadingText="Por favor espere..."
+      loadingSpinner="crescent">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
