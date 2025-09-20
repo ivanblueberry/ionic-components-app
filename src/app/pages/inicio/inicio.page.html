@@ -1,9 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title color="primary">Componentes</ion-title>
+    <ion-title color="primary">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
+  <app-large-title title="inicio"></app-large-title>
+
   <ion-list>
     <!-- Recorremos el objeto de componentes -->
     @for (c of componentes; track c.name) {

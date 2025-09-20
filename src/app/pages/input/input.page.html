@@ -1,0 +1,101 @@
+<app-header title="input"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-large-title title="input"></app-large-title>
+
+  <!-- Inputs normales-->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Inputs Normales</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-input label="Default input"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Input with placeholder" placeholder="Enter company name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Input with value" value="121 S Pinckney St #300"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Readonly input" value="Madison" [readonly]="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Disabled input" value="53703" [disabled]="true"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tipos de inputs-->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Tipos de Inputs</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-input label="Text input" placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Number input" type="number" placeholder="000"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Password input" type="password" value="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email input" type="email" placeholder="email@domain.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Telephone input" type="tel" placeholder="888-888-8888"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Formulario -->
+  <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+    <ion-list-header>
+      <ion-label>Formulario válido {{ formulario.valid }}</ion-label>
+    </ion-list-header>
+
+    <!-- Email -->
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email"
+                 placeholder="Email"
+                 name="email"
+                 [(ngModel)]="usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required="true"></ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password"
+                 name="password"
+                 [(ngModel)]="usuario.password"
+                 required="true"
+                 placeholder="Contraseña"></ion-input>
+    </ion-item>
+
+    <!-- Submit -->
+     <ion-button
+              [disabled]="formulario.invalid"
+              type="submit"
+              expand="block"
+              fill="solid"
+              shape="default">
+      Login
+     </ion-button>
+
+
+  </form>
+
+
+</ion-content>

@@ -14,8 +14,10 @@ import { RouterModule } from '@angular/router'
 
 // Icons of Ionic
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline,
+import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline
       } from 'ionicons/icons';
+import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
+import { HeaderComponent } from "src/app/components/header/header.component";
 
 
 interface Componente {
@@ -37,7 +39,7 @@ interface Componente {
     IonToolbar,
     CommonModule,
     FormsModule,
-    RouterModule, IonList, IonItem]
+    RouterModule, IonList, IonItem, LargeTitleComponent]
 })
 export class InicioPage implements OnInit {
 
@@ -61,14 +63,55 @@ export class InicioPage implements OnInit {
       icon: 'radio-button-off-outline',
       name: 'Buttons',
       redirectTo: '/button'
+    },
+    {
+      icon: 'card-outline',
+      name: 'Cards',
+      redirectTo: '/card'
+    },
+    {
+      icon: 'checkmark-circle-outline',
+      name: 'Checks',
+      redirectTo: '/check'
+    },
+    {
+      icon: 'calendar-outline',
+      name: 'DateTime',
+      redirectTo: '/date-time'
+    },
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirectTo: '/fab'
+    },
+    {
+      icon: 'grid-outline',
+      name: 'Grid',
+      redirectTo: '/grid'
+    },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite'
+    },
+    {
+      icon: 'hammer-outline',
+      name: 'Input Forms',
+      redirectTo: '/input'
     }
-  ]
-
+  ];
   constructor() {
     addIcons({americanFootballOutline,
               alertCircleOutline,
               beakerOutline,
-              radioButtonOffOutline
+              radioButtonOffOutline,
+              cardOutline,
+              checkmarkCircleOutline,
+              calendarOutline,
+              carOutline,
+              gridOutline,
+              infiniteOutline,
+              hammerOutline
     });
    }
 

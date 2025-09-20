@@ -50,4 +50,8 @@ export const routes: Routes = [
     path: 'infinite',
     loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
   },
+  {
+    path: 'input',
+    loadComponent: () => import('./pages/input/input.page').then( m => m.InputPage)
+  },
 ];
