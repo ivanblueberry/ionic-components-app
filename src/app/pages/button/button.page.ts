@@ -8,7 +8,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonCol, IonBac
   templateUrl: './button.page.html',
   styleUrls: ['./button.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonButton, IonCol, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonBackButton, IonButtons]
+  imports: [IonIcon, IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonBackButton, IonButtons]
 })
 export class ButtonPage implements OnInit {
 

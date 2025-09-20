@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonAvatar, IonImg, IonChip, IonItem, IonLabel, IonList } from '@ionic/angular/standalone';
+import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
 
 @Component({
   selector: 'app-avatar',
   templateUrl: './avatar.page.html',
   styleUrls: ['./avatar.page.scss'],
   standalone: true,
-  imports: [IonList, IonItem, IonChip, IonImg, IonAvatar, IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonLabel]
+  imports: [IonList, IonItem, IonChip, IonImg, IonAvatar, IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonLabel, LargeTitleComponent]
 })
 
 export class AvatarPage {

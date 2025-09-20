@@ -14,7 +14,7 @@ import { addOutline, logoIonic, logoAngular, logoFacebook, logoTwitter, logoYout
   templateUrl: './fab.page.html',
   styleUrls: ['./fab.page.scss'],
   standalone: true,
-  imports: [IonFabList, IonFab, IonIcon, IonFabButton, IonList, IonItem, IonLabel, IonFooter, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
+  imports: [IonFabList, IonFab, IonIcon, IonFabButton, IonList, IonItem, IonLabel, IonFooter, IonContent, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
 })
 export class FabPage implements OnInit {
 

@@ -10,7 +10,7 @@ import { LargeTitleComponent } from "src/app/components/large-title/large-title.
   templateUrl: './date-time.page.html',
   styleUrls: ['./date-time.page.scss'],
   standalone: true,
-  imports: [IonText, IonPopover, IonDatetime, IonItem, IonListHeader, IonButton, IonList, IonLabel, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
+  imports: [IonDatetime, IonItem, IonListHeader, IonList, IonLabel, IonContent, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
 })
 export class DateTimePage implements OnInit {
 
