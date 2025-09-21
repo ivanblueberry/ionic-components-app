@@ -40,7 +40,8 @@ import {
   albumsOutline,
   cogOutline,
   callOutline,
-  settingsOutline
+  settingsOutline,
+  pricetagOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -74,7 +75,8 @@ addIcons({
   'albums-outline': albumsOutline,
   'cog-outline': cogOutline,
   'call-outline': callOutline,
-  'settings-outline': settingsOutline
+  'settings-outline': settingsOutline,
+  'pricetag-outline': pricetagOutline
 });
 
 bootstrapApplication(AppComponent, {
