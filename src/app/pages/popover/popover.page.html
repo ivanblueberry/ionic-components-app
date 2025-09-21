@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <!-- To be able come to back -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Popover</ion-title>
+
+    <!-- Person icon button -->
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover( $event )" color="primary">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <app-large-title title="popover"></app-large-title>
+
+  <ion-button (click)="presentPopover( $event )" expand="block" shape="default">
+    Click me
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    
+    <!-- Person icon button -->
+    <ion-buttons slot="start">
+      <ion-button (click)="presentPopover( $event )" color="primary">
+        <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

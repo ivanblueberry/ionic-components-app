@@ -28,7 +28,9 @@ import {
   listOutline,
   reorderThreeOutline,
   refreshCircleOutline,
-  phonePortraitOutline
+  phonePortraitOutline,
+  tabletPortraitOutline,
+  personOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -50,7 +52,9 @@ addIcons({
   'list-outline': listOutline,
   'reorder-three-outline': reorderThreeOutline,
   'refresh-circle-outline': refreshCircleOutline,
-  'phone-portrait-outline': phonePortraitOutline
+  'phone-portrait-outline': phonePortraitOutline,
+  'tablet-portrait-outline': tabletPortraitOutline,
+  'person-outline': personOutline
 });
 
 bootstrapApplication(AppComponent, {
