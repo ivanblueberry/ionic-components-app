@@ -6,9 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonIcon, IonButtons, IonButton, MenuController, IonMenuButton} from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router'
 
-// Icons of Ionic
-import { addIcons } from 'ionicons';
-import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline, listOutline, reorderThreeOutline, refreshCircleOutline, add, menuOutline } from 'ionicons/icons';
 import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
 import { Observable } from 'rxjs';
 import { Componente } from 'src/app/interfaces/interfaces';
@@ -42,22 +39,6 @@ export class InicioPage implements OnInit {
   constructor( private menuCtrl: MenuController,
                private dataService: Data
   ) {
-    addIcons({menuOutline,
-              add,
-              americanFootballOutline,
-              alertCircleOutline,
-              beakerOutline,
-              radioButtonOffOutline,
-              cardOutline,
-              checkmarkCircleOutline,
-              calendarOutline,
-              carOutline,
-              gridOutline,
-              infiniteOutline,
-              hammerOutline,
-              listOutline,
-              reorderThreeOutline,
-              refreshCircleOutline});
    }
 
   ngOnInit( ) {

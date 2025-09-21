@@ -3,17 +3,29 @@
   <ion-menu contentId="main" menuId="first" side="start">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
+        <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-item>Menu Item 1</ion-item>
-        <ion-item>Menu Item </ion-item>
-        <ion-item>Menu Item 1</ion-item>
-        <ion-item>Menu Item 1</ion-item>
-        <ion-item>Menu Item 1</ion-item>
-      </ion-list>
+    <ion-list>
+
+      <!-- To hide the menu  -->
+      @for (c of componentes | async; track c.name) {
+      <ion-menu-toggle>
+        <!-- Recorremos el objeto de componentes -->
+          <!-- Redireccionamos -->
+          <ion-item [routerLink]="c.redirectTo"
+                    detail="true">
+            <ion-icon
+              [name]="c.icon"
+              slot="start"
+              color="primary"> </ion-icon>
+            {{ c.name }}
+          </ion-item>
+        </ion-menu-toggle>
+      }
+
+    </ion-list>
     </ion-content>
   </ion-menu>
 
