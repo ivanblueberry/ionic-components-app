@@ -10,3 +10,9 @@ export interface User {
   email: string;
   phone: string;
 }
+
+export interface Album {
+  userId: number;
+  id: number;
+  title: string;
+}

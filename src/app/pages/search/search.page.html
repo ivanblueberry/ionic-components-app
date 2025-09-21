@@ -1,0 +1,25 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<app-large-title title="searchbar"></app-large-title>
+<ion-searchbar placeholder="Search something"
+               animated="true"
+               inputmode="text"
+               (ionChange)="onSearchChange( $event )"
+               [debounce]="250"
+               >
+</ion-searchbar>
+
+<ion-list>
+  @for (album of albums | filtro: textToSearch; track album ) {
+    <ion-item>
+      <ion-label>{{ album.title }}</ion-label>
+    </ion-item>
+  }
+</ion-list>
+
+</ion-content>
