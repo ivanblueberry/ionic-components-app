@@ -6,6 +6,10 @@ import { Componente } from './interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { Data } from './services/data';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { register } from 'swiper/element/bundle';
+register();
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

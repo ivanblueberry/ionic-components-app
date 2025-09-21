@@ -36,7 +36,8 @@ import {
   sunnyOutline,
   arrowDownCircleOutline,
   searchOutline,
-  copyOutline
+  copyOutline,
+  albumsOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -66,7 +67,8 @@ addIcons({
   'sunny-outline': sunnyOutline,
   'arrow-down-circle-outline': arrowDownCircleOutline,
   'search-outline': searchOutline,
-  'copy-outline': copyOutline
+  'copy-outline': copyOutline,
+  'albums-outline': albumsOutline
 });
 
 bootstrapApplication(AppComponent, {

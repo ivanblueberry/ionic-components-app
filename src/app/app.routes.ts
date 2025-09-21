@@ -90,4 +90,8 @@ export const routes: Routes = [
     path: 'segment',
     loadComponent: () => import('./pages/segment/segment.page').then( m => m.SegmentPage)
   },
+  {
+    path: 'slides',
+    loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
 ];
