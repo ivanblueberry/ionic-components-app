@@ -3,27 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 // Standalones
-import { IonContent,
-          IonHeader,
-          IonTitle,
-          IonToolbar,
-          IonList,
-          IonItem,
-          IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonIcon, IonButtons, IonButton, MenuController, IonMenuButton} from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router'
 
 // Icons of Ionic
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline, listOutline, reorderThreeOutline, refreshCircleOutline
-      } from 'ionicons/icons';
+import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline, listOutline, reorderThreeOutline, refreshCircleOutline, add, menuOutline } from 'ionicons/icons';
 import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
-
-
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
+import { Observable } from 'rxjs';
+import { Componente } from 'src/app/interfaces/interfaces';
+import { Data } from 'src/app/services/data';
 
 
 @Component({
@@ -31,91 +20,31 @@ interface Componente {
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
-  imports: [IonIcon,
+  imports: [
+    IonButtons,
+    IonIcon,
     IonContent,
     IonHeader,
     IonTitle,
     IonToolbar,
     CommonModule,
     FormsModule,
-    RouterModule, IonList, IonItem, LargeTitleComponent]
+    RouterModule,
+    IonList,
+    IonItem,
+    LargeTitleComponent,
+    IonMenuButton]
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
-    {
-      icon: 'american-football-outline',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'alert-circle-outline',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'beaker-outline',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'radio-button-off-outline',
-      name: 'Buttons',
-      redirectTo: '/button'
-    },
-    {
-      icon: 'card-outline',
-      name: 'Cards',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'Checks',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'calendar-outline',
-      name: 'DateTime',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'car-outline',
-      name: 'Fab',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'grid-outline',
-      name: 'Grid',
-      redirectTo: '/grid'
-    },
-    {
-      icon: 'infinite-outline',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite'
-    },
-    {
-      icon: 'hammer-outline',
-      name: 'Input Forms',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'list-outline',
-      name: 'List Sliding',
-      redirectTo: '/list'
-    },
-    {
-      icon: 'reorder-three-outline',
-      name: 'List Reorder',
-      redirectTo: '/list-reorder'
-    },
-    {
-      icon: 'refresh-circle-outline',
-      name: 'Loading',
-      redirectTo: '/loading'
-    }
-  ];
-  constructor() {
-    addIcons({americanFootballOutline,
+  componentes!: Observable<Componente[]>;
+
+  constructor( private menuCtrl: MenuController,
+               private dataService: Data
+  ) {
+    addIcons({menuOutline,
+              add,
+              americanFootballOutline,
               alertCircleOutline,
               beakerOutline,
               radioButtonOffOutline,
@@ -128,11 +57,16 @@ export class InicioPage implements OnInit {
               hammerOutline,
               listOutline,
               reorderThreeOutline,
-              refreshCircleOutline
-    });
+              refreshCircleOutline});
    }
 
-  ngOnInit() {
+  ngOnInit( ) {
+    this.componentes = this.dataService.getMenuOpts()
   }
+
+  // The hard way
+  // showMenu() {
+  //   this.menuCtrl.open('first');
+  // }
 
 }

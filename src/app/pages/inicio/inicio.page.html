@@ -1,5 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <!-- The hard way -->
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="showMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+
     <ion-title color="primary">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +22,7 @@
 
   <ion-list>
     <!-- Recorremos el objeto de componentes -->
-    @for (c of componentes; track c.name) {
+    @for (c of componentes | async; track c.name) {
       <!-- Redireccionamos -->
       <ion-item [routerLink]="c.redirectTo"
                 detail="true">
@@ -17,7 +30,6 @@
           [name]="c.icon"
           slot="start"
           color="primary"> </ion-icon>
-
         {{ c.name }}
       </ion-item>
     }
