@@ -4,15 +4,39 @@
   <app-large-title title="list"></app-large-title>
 
   <ion-list>
-    @for (user of usuarios | async; track user.id) {
-      <ion-item>
-        <ion-label>
-          <h3>{{ user.name }}</h3>
-          <p>{{ user.email }}</p>
-        </ion-label>
 
-        <ion-label slot="end" class="ion-text-sm-end">{{ user.phone }}</ion-label>
-      </ion-item>
+    @for (user of usuarios | async; track user.id) {
+      <ion-item-sliding>
+        <!-- Options in left side (start)-->
+        <ion-item-options side="start">
+          <!-- Favorite Option -->
+          <ion-item-option (click)="favorite(user)">
+            <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+          </ion-item-option>
+          <!-- Share Option -->
+          <ion-item-option color="danger" (click)="share(user)">
+            <ion-icon slot="icon-only" name="share-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+
+
+        <ion-item>
+          <ion-label>
+            <h3>{{ user.name }}</h3>
+            <p>{{ user.email }}</p>
+          </ion-label>
+          <ion-label slot="end" class="ion-text-sm-end">{{ user.phone }}</ion-label>
+        </ion-item>
+
+        <!-- Options in right side (end)-->
+        <ion-item-options side="end">
+          <!-- Delete Option -->
+          <ion-item-option color="danger" (click)="trash(user)">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+
+      </ion-item-sliding>
     }
   </ion-list>
 </ion-content>
