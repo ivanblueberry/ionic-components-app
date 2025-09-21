@@ -4,14 +4,15 @@
   <app-large-title title="list"></app-large-title>
 
   <ion-list>
-    <ion-item *ngFor="let user of usuarios | async">
+    @for (user of usuarios | async; track user.id) {
+      <ion-item>
+        <ion-label>
+          <h3>{{ user.name }}</h3>
+          <p>{{ user.email }}</p>
+        </ion-label>
 
-      <ion-label>
-        <h3>{{ user.name }}</h3>
-        <p>{{ user.email }}</p>
-      </ion-label>
-
-      <ion-label slot="end" class="ion-text-sm-end">{{ user.phone }}</ion-label>
-    </ion-item>
+        <ion-label slot="end" class="ion-text-sm-end">{{ user.phone }}</ion-label>
+      </ion-item>
+    }
   </ion-list>
 </ion-content>
