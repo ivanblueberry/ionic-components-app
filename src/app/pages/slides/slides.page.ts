@@ -12,7 +12,7 @@ import { HeaderComponent } from "src/app/components/header/header.component";
   templateUrl: './slides.page.html',
   styleUrls: ['./slides.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent],
+  imports: [IonContent, CommonModule, FormsModule, HeaderComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SlidesPage implements OnInit {
