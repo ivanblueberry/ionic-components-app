@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Album, Componente, User } from '../interfaces/interfaces';
+import { Album, Componente, Heroe, User } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -21,4 +21,9 @@ export class Data {
   getMenuOpts(): Observable<Componente[]> {
     return this.http.get<Componente[]>('/assets/data/menu-opts.json');
   }
+
+  getHeroes(): Observable<Heroe[]> {
+    return this.http.get<Heroe[]>('/assets/data/superheroes.json');
+  }
+
 }

@@ -35,7 +35,8 @@ import {
   snowOutline,
   sunnyOutline,
   arrowDownCircleOutline,
-  searchOutline
+  searchOutline,
+  copyOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -64,7 +65,8 @@ addIcons({
   'snow-outline': snowOutline,
   'sunny-outline': sunnyOutline,
   'arrow-down-circle-outline': arrowDownCircleOutline,
-  'search-outline': searchOutline
+  'search-outline': searchOutline,
+  'copy-outline': copyOutline
 });
 
 bootstrapApplication(AppComponent, {
