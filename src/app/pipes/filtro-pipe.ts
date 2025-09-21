@@ -1,33 +1,32 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Album } from '../interfaces/interfaces';
 
 @Pipe({
-  name: 'filtro'
+  name: 'filtro',
+  standalone: true  // Añadir esto para componentes standalone
 })
 export class FiltroPipe implements PipeTransform {
 
   /**
-   *
-   * @param array albums of service
-   * @param texto text to search or filter
+   * @param array Array de cualquier tipo
+   * @param texto Texto a buscar o filtrar
+   * @param column Propiedad del objeto a filtrar
    */
-  transform(array: Album[],
+  transform(array: any[],
             texto: string = '',
-            column: keyof Album = 'title'): Album[] {
+            column: string = 'title'): any[] {
 
-    if ( texto === '') {
+    if (texto === '' || texto === 'todos') {
       return array;
     }
 
-    if ( !array ) {
+    if (!array) {
       return array;
     }
 
-    texto = texto.toLocaleLowerCase();
+    texto = texto.toLowerCase();
 
     return array.filter(
-      item => String(item[column]).toLowerCase().includes( texto )
+      item => String(item[column]).toLowerCase().includes(texto)
     );
   }
-
 }
