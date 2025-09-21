@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { Album, Componente, Heroe, User } from '../interfaces/interfaces';
 
 @Injectable({
@@ -23,7 +23,10 @@ export class Data {
   }
 
   getHeroes(): Observable<Heroe[]> {
-    return this.http.get<Heroe[]>('/assets/data/superheroes.json');
+    return this.http.get<Heroe[]>('/assets/data/superheroes.json')
+          .pipe(
+            delay( 1500 )
+          );
   }
 
 }

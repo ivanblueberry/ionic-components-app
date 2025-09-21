@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonSegment, IonSegmentButton, IonLabel, IonList, IonItem, IonButton, IonButtons, IonBackButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonSegment, IonSegmentButton, IonLabel, IonList, IonItem, IonButton, IonButtons, IonBackButton, IonSkeletonText } from '@ionic/angular/standalone';
 import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
 import { Heroe } from 'src/app/interfaces/interfaces';
 import { Observable } from 'rxjs';
@@ -13,7 +13,7 @@ import { FiltroPipe } from "../../pipes/filtro-pipe";
   templateUrl: './segment.page.html',
   styleUrls: ['./segment.page.scss'],
   standalone: true,
-  imports: [IonBackButton, IonButtons, IonItem, IonList, IonLabel, IonSegmentButton, IonSegment, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, LargeTitleComponent, FiltroPipe]
+  imports: [IonSkeletonText, IonBackButton, IonButtons, IonItem, IonList, IonLabel, IonSegmentButton, IonSegment, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, LargeTitleComponent, FiltroPipe]
 })
 export class SegmentPage implements OnInit {
 

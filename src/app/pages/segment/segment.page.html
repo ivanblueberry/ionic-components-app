@@ -30,8 +30,10 @@
   <app-large-title title="segment"></app-large-title>
 
   <ion-list>
+
+
     @for (heroe of ((superHeroes | async) || []) | filtro: publisher : 'publisher'; track heroe) {
-      <ion-item>
+      <ion-item class="animate__animated animate__fadeIn animate__faster">
         <ion-label>
           <h3>{{ heroe.superhero }} <small>{{ heroe.alter_ego }}</small></h3>
           <p>{{ heroe.first_appearance }}</p>
@@ -42,6 +44,31 @@
         </ion-label>
       </ion-item>
     }
+
+    <!-- If the observable is equals null -->
+     @if ( (superHeroes | async) === null ) {
+       @for (item of [1, 1, 1, 1, 1]; track $index) {
+       <ion-list>
+           <ion-item>
+             <ion-label>
+               <h3>
+                 <!-- Animation of the info h3 -->
+                 <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+               </h3>
+               <p>
+                 <!-- Animation of the info p -->
+                 <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+               </p>
+             </ion-label>
+
+             <ion-skeleton-text slot="end" animated style="width: 50px; height: 50px;"></ion-skeleton-text>
+
+           </ion-item>
+          </ion-list>
+        }
+     }
+
+
   </ion-list>
 </ion-content>
 
