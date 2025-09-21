@@ -30,7 +30,10 @@ import {
   refreshCircleOutline,
   phonePortraitOutline,
   tabletPortraitOutline,
-  personOutline
+  personOutline,
+  codeWorkingOutline,
+  snowOutline,
+  sunnyOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -54,7 +57,10 @@ addIcons({
   'refresh-circle-outline': refreshCircleOutline,
   'phone-portrait-outline': phonePortraitOutline,
   'tablet-portrait-outline': tabletPortraitOutline,
-  'person-outline': personOutline
+  'person-outline': personOutline,
+  'code-working-outline': codeWorkingOutline,
+  'snow-outline': snowOutline,
+  'sunny-outline': sunnyOutline
 });
 
 bootstrapApplication(AppComponent, {
