@@ -1,13 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Modal Page Info</ion-title>
+    <ion-title>{{ nombre }} - {{ pais }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <app-large-title title="modal page info"></app-large-title>
+  <app-large-title title="{{ nombre }} - {{ pais }}"></app-large-title>
 
   <ion-button (click)="exitWithNoArguments()" expand="block" shape="default">
-    Cerrar Modal
+    Cerrar Modal (sin argumentos)
+  </ion-button>
+
+  <ion-button (click)="exitWithArguments()" expand="block" shape="default">
+    Cerrar Modal (con argumentos)
   </ion-button>
 </ion-content>
