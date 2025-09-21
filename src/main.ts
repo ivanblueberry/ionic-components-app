@@ -11,8 +11,45 @@ import {
   provideIonicAngular,
 } from '@ionic/angular/standalone';
 
+// Importar iconos de Ionicons
+import { addIcons } from 'ionicons';
+import {
+  americanFootballOutline,
+  alertCircleOutline,
+  beakerOutline,
+  radioButtonOffOutline,
+  cardOutline,
+  checkmarkCircleOutline,
+  calendarOutline,
+  carOutline,
+  gridOutline,
+  infiniteOutline,
+  hammerOutline,
+  listOutline,
+  reorderThreeOutline,
+  refreshCircleOutline
+} from 'ionicons/icons';
+
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+
+// Registrar todos los iconos globalmente
+addIcons({
+  'american-football-outline': americanFootballOutline,
+  'alert-circle-outline': alertCircleOutline,
+  'beaker-outline': beakerOutline,
+  'radio-button-off-outline': radioButtonOffOutline,
+  'card-outline': cardOutline,
+  'checkmark-circle-outline': checkmarkCircleOutline,
+  'calendar-outline': calendarOutline,
+  'car-outline': carOutline,
+  'grid-outline': gridOutline,
+  'infinite-outline': infiniteOutline,
+  'hammer-outline': hammerOutline,
+  'list-outline': listOutline,
+  'reorder-three-outline': reorderThreeOutline,
+  'refresh-circle-outline': refreshCircleOutline
+});
 
 bootstrapApplication(AppComponent, {
   providers: [
