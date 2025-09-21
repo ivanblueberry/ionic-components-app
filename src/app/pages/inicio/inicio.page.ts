@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router'
 
 // Icons of Ionic
 import { addIcons } from 'ionicons';
-import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline, listOutline
+import { alertCircleOutline, americanFootballOutline, beakerOutline, radioButtonOffOutline, cardOutline, checkmarkCircleOutline, calendarOutline, carOutline, gridOutline, infiniteOutline, hammerOutline, listOutline, reorderThreeOutline
       } from 'ionicons/icons';
 import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
 
@@ -102,6 +102,11 @@ export class InicioPage implements OnInit {
       icon: 'list-outline',
       name: 'List Sliding',
       redirectTo: '/list'
+    },
+    {
+      icon: 'reorder-three-outline',
+      name: 'List Reorder',
+      redirectTo: '/list-reorder'
     }
   ];
   constructor() {
@@ -116,7 +121,8 @@ export class InicioPage implements OnInit {
               gridOutline,
               infiniteOutline,
               hammerOutline,
-              listOutline
+              listOutline,
+              reorderThreeOutline
     });
    }
 

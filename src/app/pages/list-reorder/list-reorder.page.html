@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">List Reorder</ion-title>
+
+    <!-- Button -->
+     <ion-buttons slot="end">
+      <ion-button (click)="reorderDisabled = !reorderDisabled">
+        Toggle
+      </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-large-title title="list reorder"></app-large-title>
+
+  <ion-list>
+    <ion-reorder-group [disabled]="reorderDisabled"
+                       (ionItemReorder)=" doReorder( $event )">
+
+      <!-- Iteration of our list personajes -->
+      @for (personaje of personajes; track personaje) {
+        <ion-item>
+          <ion-label> {{ personaje }}</ion-label>
+          <!-- This label allows us to move the item -->
+          <ion-reorder slot="end">
+            <!-- Toggle the icon -->
+            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+      }
+
+    </ion-reorder-group>
+  </ion-list>
+
+</ion-content>
