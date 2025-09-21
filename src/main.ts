@@ -33,7 +33,8 @@ import {
   personOutline,
   codeWorkingOutline,
   snowOutline,
-  sunnyOutline
+  sunnyOutline,
+  arrowDownCircleOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -60,7 +61,8 @@ addIcons({
   'person-outline': personOutline,
   'code-working-outline': codeWorkingOutline,
   'snow-outline': snowOutline,
-  'sunny-outline': sunnyOutline
+  'sunny-outline': sunnyOutline,
+  'arrow-down-circle-outline': arrowDownCircleOutline
 });
 
 bootstrapApplication(AppComponent, {
