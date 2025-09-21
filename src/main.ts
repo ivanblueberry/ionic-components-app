@@ -27,7 +27,8 @@ import {
   hammerOutline,
   listOutline,
   reorderThreeOutline,
-  refreshCircleOutline
+  refreshCircleOutline,
+  phonePortraitOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -48,7 +49,8 @@ addIcons({
   'hammer-outline': hammerOutline,
   'list-outline': listOutline,
   'reorder-three-outline': reorderThreeOutline,
-  'refresh-circle-outline': refreshCircleOutline
+  'refresh-circle-outline': refreshCircleOutline,
+  'phone-portrait-outline': phonePortraitOutline
 });
 
 bootstrapApplication(AppComponent, {
