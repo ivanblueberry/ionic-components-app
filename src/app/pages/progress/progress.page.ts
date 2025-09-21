@@ -10,7 +10,7 @@ import { LargeTitleComponent } from "src/app/components/large-title/large-title.
   templateUrl: './progress.page.html',
   styleUrls: ['./progress.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonRange, IonList, IonItem, IonLabel, IonProgressBar, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
+  imports: [IonIcon, IonRange, IonList, IonItem, IonProgressBar, IonContent, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
 })
 export class ProgressPage implements OnInit {
 
