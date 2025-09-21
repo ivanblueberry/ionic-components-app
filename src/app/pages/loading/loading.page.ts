@@ -10,7 +10,7 @@ import { LargeTitleComponent } from "src/app/components/large-title/large-title.
   templateUrl: './loading.page.html',
   styleUrls: ['./loading.page.scss'],
   standalone: true,
-  imports: [IonButton, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
+  imports: [IonButton, IonContent, CommonModule, FormsModule, HeaderComponent, LargeTitleComponent]
 })
 export class LoadingPage implements OnInit {
 

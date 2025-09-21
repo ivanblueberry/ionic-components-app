@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonLabel, IonItem, IonList, IonItemSliding, IonItemOptions, IonItemOption, IonIcon } from '@ionic/angular/standalone';
 import { HeaderComponent } from "src/app/components/header/header.component";
 import { LargeTitleComponent } from "src/app/components/large-title/large-title.component";
-import { Data, User } from 'src/app/services/data';
+import { Data } from 'src/app/services/data';
 import { Observable } from 'rxjs';
 
 // Icons of Ionic
