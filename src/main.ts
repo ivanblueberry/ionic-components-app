@@ -37,7 +37,10 @@ import {
   arrowDownCircleOutline,
   searchOutline,
   copyOutline,
-  albumsOutline
+  albumsOutline,
+  cogOutline,
+  callOutline,
+  settingsOutline
 } from 'ionicons/icons';
 
 import { routes } from './app/app.routes';
@@ -68,7 +71,10 @@ addIcons({
   'arrow-down-circle-outline': arrowDownCircleOutline,
   'search-outline': searchOutline,
   'copy-outline': copyOutline,
-  'albums-outline': albumsOutline
+  'albums-outline': albumsOutline,
+  'cog-outline': cogOutline,
+  'call-outline': callOutline,
+  'settings-outline': settingsOutline
 });
 
 bootstrapApplication(AppComponent, {

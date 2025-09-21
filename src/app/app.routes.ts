@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { TabsPage } from './pages/tabs/tabs.page';
 
 export const routes: Routes = [
   {
@@ -93,5 +94,32 @@ export const routes: Routes = [
   {
     path: 'slides',
     loadComponent: () => import('./pages/slides/slides.page').then( m => m.SlidesPage)
+  },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./pages/tabs/tabs.page').then( m => m.TabsPage)
+  },
+  {
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'account',
+        loadComponent: () => import('./pages/avatar/avatar.page').then( m => m.AvatarPage)
+      },
+      {
+        path: 'contact',
+        loadComponent: () => import('./pages/list/list.page').then( m => m.ListPage)
+      },
+      {
+        path: 'settings',
+        loadComponent: () => import('./pages/infinite/infinite.page').then( m => m.InfinitePage)
+      },
+      {
+        path: '',
+        redirectTo: '/tabs/account',
+        pathMatch: 'full',
+      },
+    ],
   },
 ];
