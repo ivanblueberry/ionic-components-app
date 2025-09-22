@@ -39,19 +39,20 @@ This repository has been **completely modernized** compared to the original 2019
 ## Screenshots
 
 ### Home Screen
-![Home Screenshot](src/assets/screenshots/iPhone-14-home.jpeg)
+<img src="src/assets/screenshots/iPhone-14-home.jpeg" alt="Home Screenshot" width="300px">
 
 ### Menu Screen
-![Menu Screenshot](src/assets/screenshots/iPhone-14-menu.jpeg)
+<img src="src/assets/screenshots/iPhone-14-menu.jpeg" alt="Menu Screenshot" width="300px">
 
 ### Card Page
-![Card Screenshot](src/assets/screenshots/iPhone-14-card.jpeg)
+<img src="src/assets/screenshots/iPhone-14-card.jpeg" alt="Card Screenshot" width="300px">
 
 ### Action Sheet Page
-![Action Sheet Screenshot](src/assets/screenshots/iPhone-14-action-sheet.jpeg)
+<img src="src/assets/screenshots/iPhone-14-action-sheet.jpeg" alt="Action Sheet Screenshot" width="300px">
 
-### Ipad Home Page
-![Ipad Home Screenshot](src/assets/screenshots/iPad-home.jpeg)
+### iPad Home Page
+<img src="src/assets/screenshots/iPad-home.jpeg" alt="iPad Home Screenshot" width="300px">
+
 
 ## Requirements
 
@@ -78,8 +79,8 @@ Follow these steps to get the project running on your local machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/ivanblueberry/ionic-with-standalones.git
-cd ionic-with-standalones
+git clone https://github.com/ivanblueberry/modern-ionic-standalones.git
+cd modern-ionic-standalones
 ```
 
 ### 2. Install Dependencies
