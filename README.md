@@ -1,12 +1,14 @@
-# Ionic Components Showcase - Standalone Edition
+# Ionic Components App
 
-A modern Ionic application showcasing various UI components, built with the latest Angular and Ionic technologies using standalone components architecture.
+A modern Ionic application showcasing various UI components, built with the latest Angular and Ionic technologies.
 
 ## Project Description
 
 This project was originally inspired by **Fernando Herrera's course "Ionic 6: Create iOS and Android Apps with Angular - 2019"** and was developed as part of a **Mobile Application Development class**. 
 
 The application serves as a comprehensive showcase of Ionic components and features, demonstrating how to build mobile applications with modern Angular and Ionic frameworks. It includes examples of various UI components, navigation patterns, and mobile-specific functionalities.
+
+This updated version uses **standalone components** instead of NgModules, representing a modern approach compared to the original course material.
 
 ## Features / Differences from the Original Course
 
@@ -79,8 +81,8 @@ Follow these steps to get the project running on your local machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/ivanblueberry/modern-ionic-standalones.git
-cd modern-ionic-standalones
+git clone https://github.com/ivanblueberry/ionic-components-app.git
+cd ionic-components-app
 ```
 
 ### 2. Install Dependencies
